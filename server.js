@@ -14,7 +14,12 @@ const port = process.env.PORT || 8080;
 // Allow the Bibliotheca frontend dev server and any deployed origins
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(",").map((o) => o.trim())
-  : ["http://localhost:5173", "http://localhost:5175", "http://localhost:3000"];
+  : [
+      "http://localhost:5173",
+      "http://localhost:5175",
+      "http://localhost:3000",
+      "https://book-management-system-frontend-h48u.onrender.com",
+    ];
 
 app.use(
   cors({
